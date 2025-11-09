@@ -7,8 +7,14 @@
   "scripts": {
     "build": "lerna run build"
   },
+  "commitlint": {
+    "extends": "@forsakringskassan/commitlint-config/no-jira"
+  },
+  "prettier": "@forsakringskassan/prettier-config",
   "dependencies": {},
   "devDependencies": {
+    "@forsakringskassan/commitlint-config": "3.2.1",
+    "@forsakringskassan/prettier-config": "3.1.7",
     "lerna": "^9.0.0"
   }
 }
