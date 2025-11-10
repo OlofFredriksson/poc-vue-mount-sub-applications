@@ -6,18 +6,28 @@
   ],
   "scripts": {
     "build": "lerna run build",
+    "container": "npm --prefix packages/container run dev",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix .",
+    "lint:fix": "run-s eslint:fix prettier:write",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "test": "npm run prettier:check"
+    "start": "npm-run-all2 --parallel container uppgift1",
+    "test": "run-s eslint prettier:check",
+    "uppgift1": "npm --prefix packages/uppgift1 run build && npm --prefix packages/uppgift1 run preview"
   },
   "commitlint": {
     "extends": "@forsakringskassan/commitlint-config/no-jira"
   },
   "prettier": "@forsakringskassan/prettier-config",
-  "dependencies": {},
   "devDependencies": {
     "@forsakringskassan/commitlint-config": "3.2.1",
+    "@forsakringskassan/eslint-config": "13.2.0",
+    "@forsakringskassan/eslint-config-cli": "13.2.0",
+    "@forsakringskassan/eslint-config-typescript": "13.2.1",
+    "@forsakringskassan/eslint-config-vue": "13.2.1",
     "@forsakringskassan/prettier-config": "3.1.7",
-    "lerna": "^9.0.0"
+    "lerna": "^9.0.0",
+    "npm-run-all2": "8.0.4"
   }
 }
