@@ -15,6 +15,9 @@ export default defineConfig({
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
+    preview: {
+        port: 8081,
+    },
     define: { "process.env": '"production"' },
     build: {
         lib: {

@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fkui/design": "^6.25.1",
+    "@fkui/logic": "^6.25.0",
+    "@fkui/vue": "^6.25.1",
     "vue": "^3.5.22"
   },
   "devDependencies": {

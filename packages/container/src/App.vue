@@ -1,47 +1,23 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+import { onMounted } from "vue";
+import { FWizard, FWizardStep } from "@fkui/vue";
+
+onMounted(async () => {
+    // eslint-disable-next-line import/no-unresolved, import/extensions -- dynamic import
+    const importedUppgift = await import("http://localhost:8081/uppgift1.js");
+    importedUppgift.init("#expUppgift");
+});
 </script>
 
 <template>
-    <header>
-        <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-        <div class="wrapper">
-            <HelloWorld msg="You did it!" />
-        </div>
-    </header>
-
     <main>
-        <TheWelcome />
+        <f-wizard header-tag="h2">
+            <f-wizard-step key="steg1" :use-error-list="false" title="Stegrubrik 1">
+                <div id="expUppgift"></div>
+            </f-wizard-step>
+            <f-wizard-step key="complete" :use-error-list="false" title="Du är klar"> Nu är du klar! :D </f-wizard-step>
+        </f-wizard>
     </main>
 </template>
 
-<style scoped>
-header {
-    line-height: 1.5;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-    header {
-        display: flex;
-        place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
-    }
-
-    .logo {
-        margin: 0 2rem 0 0;
-    }
-
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
-}
-</style>
+<style scoped></style>

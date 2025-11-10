@@ -27,7 +27,9 @@ export default [
         name: "local/technical-debt",
         rules: {
             "@typescript-eslint/explicit-function-return-type": "off",
+            "@typescript-eslint/no-non-null-assertion": "off",
             "vue/no-restricted-block": "off",
+            "no-console": "off",
         },
     },
 ];
