@@ -30,6 +30,7 @@ export default [
             "@typescript-eslint/no-non-null-assertion": "off",
             "vue/no-restricted-block": "off",
             "no-console": "off",
+            "no-warning-comments": "off",
         },
     },
 ];

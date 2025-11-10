@@ -3,8 +3,11 @@ import { onMounted } from "vue";
 import { FWizard, FWizardStep } from "@fkui/vue";
 
 onMounted(async () => {
-    // eslint-disable-next-line import/no-unresolved, import/extensions -- dynamic import
-    const importedUppgift = await import("http://localhost:8081/uppgift1.js");
+    const response = await fetch("/api/hamta-uppgifter");
+    const result = await response.json();
+
+    /* Todo : Borde loopa ut flera uppgifter här */
+    const importedUppgift = await import(result[0].url);
     importedUppgift.init("#expUppgift");
 });
 </script>
