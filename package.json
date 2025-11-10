@@ -5,7 +5,10 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "test": "npm run prettier:check"
   },
   "commitlint": {
     "extends": "@forsakringskassan/commitlint-config/no-jira"
