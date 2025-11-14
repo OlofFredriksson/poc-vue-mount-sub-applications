@@ -1,6 +1,9 @@
 export default {
     defaultResponse: {
         status: 200,
-        body: [{ uid: 1337, url: "http://localhost:8081/uppgift1.js" }],
+        body: [
+            { uid: 1337, url: "http://localhost:8081/uppgift1.js" },
+            { uid: 1337, url: "http://localhost:8082/uppgift2.js" },
+        ],
     },
 };

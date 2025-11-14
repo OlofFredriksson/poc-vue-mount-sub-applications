@@ -12,9 +12,10 @@
     "lint:fix": "run-s eslint:fix prettier:write",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "start": "npm-run-all2 --parallel container uppgift1",
+    "start": "run-p container uppgift*",
     "test": "run-s eslint prettier:check",
-    "uppgift1": "npm --prefix packages/uppgift1 run build && npm --prefix packages/uppgift1 run preview"
+    "uppgift1": "npm --prefix packages/uppgift1 run build && npm --prefix packages/uppgift1 run preview",
+    "uppgift2": "npm --prefix packages/uppgift2 run build && npm --prefix packages/uppgift2 run preview"
   },
   "commitlint": {
     "extends": "@forsakringskassan/commitlint-config/no-jira"

@@ -16,9 +16,14 @@ Applikation nåbar på följande url:
 
 ## Leverabler
 
-- 1st Container-app som kan skrivas i valfritt språk
-- 1st Vue-app (Uppgift). Kan i teorin skrivas om React / Svelte så länge vi bestämt om ett internt api hur Uppgifter och container skall kommunicera med varandra.
-- 1st backend-api som returnerar vilka uppgifter som skall renderas
+- Container-app som kan skrivas i valfritt språk
+- Uppgift skriven i Vue-app (Uppgift).
+- Uppgift utan ramverk (uppgift2)
+- backend-api som returnerar vilka uppgifter som skall renderas
+
+## Ej knutet till ett ramverk
+
+Uppgifter kan i teorin skrivas om Vue / React / Svelte så länge vi bestämt om ett internt api hur Uppgifter och container skall kommunicera med varandra.
 
 ## Att tänka på
 
